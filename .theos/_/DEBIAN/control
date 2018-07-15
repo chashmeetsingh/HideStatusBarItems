@@ -1,0 +1,10 @@
+Package: com.chashmeet.hidestatusbaritems
+Name: HideStatusBarItems
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Chashmeet Singh
+Author: Chashmeet Singh
+Section: Tweaks
+Version: 0.0.1-2+debug
+Installed-Size: 168
