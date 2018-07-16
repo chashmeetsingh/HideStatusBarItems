@@ -28,8 +28,4 @@
 	
 }
 
--(void)respring {
-	killall SpringBoard;
-}
-
 @end
