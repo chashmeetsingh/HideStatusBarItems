@@ -27,6 +27,7 @@ static BOOL enableTweak = NO;
 %hook SBStatusBarStateAggregator
 
 -(BOOL)_setItem:(int)item enabled:(BOOL)enableItem {
+	// 0: Time but not working
     // 1: DND
     // 2: Airplane Mode
     // 3: Mobile Signal
@@ -46,81 +47,97 @@ static BOOL enableTweak = NO;
     // 24: VPN icon
     // 25: Related to call outward icon
     // 27: Black square icon
+	// 34: Plugged in earphones
+
+	//NSLog(@"Item number: %d", item);
 
 	if (enableTweak == YES) {
-		NSLog(@"Tweak enabled");
+		//NSLog(@"Tweak enabled");
 
 		switch (item) {
 			case 1:
-				NSLog(@"dndSwitch %d", dndSwitch);
+				//NSLog(@"dndSwitch %d", dndSwitch);
 				if (dndSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 2:
-				NSLog(@"airplaneModeSwitch %d", airplaneModeSwitch);
+				//NSLog(@"airplaneModeSwitch %d", airplaneModeSwitch);
 				if (airplaneModeSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 3:
-				NSLog(@"signalStrengthSwitch %d", signalStrengthSwitch);
+				//NSLog(@"signalStrengthSwitch %d", signalStrengthSwitch);
 				if (signalStrengthSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 4:
-				NSLog(@"carrierTextSwitch %d", carrierTextSwitch);
+				//NSLog(@"carrierTextSwitch %d", carrierTextSwitch);
 				if (carrierTextSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 6:
-				NSLog(@"wifiSwitch %d", wifiSwitch);
+				//NSLog(@"wifiSwitch %d", wifiSwitch);
 				if (wifiSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 8:
-				NSLog(@"batteryIconSwitch %d", batteryIconSwitch);
+				//NSLog(@"batteryIconSwitch %d", batteryIconSwitch);
 				if (batteryIconSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 9:
-				NSLog(@"batteryTextSwitch %d", batteryTextSwitch);
+				//NSLog(@"batteryTextSwitch %d", batteryTextSwitch);
 				if (batteryTextSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 12:
-				NSLog(@"bluetoothSwitch %d", bluetoothSwitch);
+				//NSLog(@"bluetoothSwitch %d", bluetoothSwitch);
 				if (bluetoothSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 14:
-				NSLog(@"alarmSwitch %d", alarmSwitch);
+				//NSLog(@"alarmSwitch %d", alarmSwitch);
 				if (alarmSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 17:
-				NSLog(@"locationSwitch %d", locationSwitch);
+				//NSLog(@"locationSwitch %d", locationSwitch);
 				if (locationSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 18:
-				NSLog(@"orientationLockSwitch %d", orientationLockSwitch);
+				//NSLog(@"orientationLockSwitch %d", orientationLockSwitch);
 				if (orientationLockSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 20:
-				NSLog(@"screenMirroringSwitch %d", screenMirroringSwitch);
+				//NSLog(@"screenMirroringSwitch %d", screenMirroringSwitch);
 				if (screenMirroringSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			case 24:
-				NSLog(@"vpnSwitch %d", vpnSwitch);
+				//NSLog(@"vpnSwitch %d", vpnSwitch);
 				if (vpnSwitch == YES) {
 					return %orig(item, NO);
 				}
+				break;
 			default: 
 				return %orig;
 		}
 	}
-	NSLog(@"Tweak disabled");
+	//NSLog(@"Tweak disabled");
 
 	return %orig;
 }
@@ -171,24 +188,23 @@ static void notificationCallback(CFNotificationCenterRef center, void *observer,
 	NSNumber *n = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"enableTweak" inDomain:domainString];
 	enableTweak = [n boolValue];
 
-	NSLog(@"dndSwitch update %d", dndSwitch);
-	NSLog(@"airplaneModeSwitch update %d", airplaneModeSwitch);
-	NSLog(@"signalStrengthSwitch update %d", signalStrengthSwitch);
-	NSLog(@"carrierTextSwitch update %d", carrierTextSwitch);
-	NSLog(@"wifiSwitch update %d", wifiSwitch);
-	NSLog(@"batteryIconSwitch update %d", batteryIconSwitch);
-	NSLog(@"batteryTextSwitch update %d", batteryTextSwitch);
-	NSLog(@"bluetoothSwitch update %d", bluetoothSwitch);
-	NSLog(@"alarmSwitch update %d", alarmSwitch);
-	NSLog(@"locationSwitch update %d", locationSwitch);
-	NSLog(@"orientationLockSwitch update %d", orientationLockSwitch);
-	NSLog(@"vpnSwiscreenMirroringSwitch update %d", vpnSwitch);
-	NSLog(@"vpnSwitch update %d", vpnSwitch);
-	NSLog(@"enableTweak %d", enableTweak);
+	//NSLog(@"dndSwitch update %d", dndSwitch);
+	//NSLog(@"airplaneModeSwitch update %d", airplaneModeSwitch);
+	//NSLog(@"signalStrengthSwitch update %d", signalStrengthSwitch);
+	//NSLog(@"carrierTextSwitch update %d", carrierTextSwitch);
+	//NSLog(@"wifiSwitch update %d", wifiSwitch);
+	//NSLog(@"batteryIconSwitch update %d", batteryIconSwitch);
+	//NSLog(@"batteryTextSwitch update %d", batteryTextSwitch);
+	//NSLog(@"bluetoothSwitch update %d", bluetoothSwitch);
+	//NSLog(@"alarmSwitch update %d", alarmSwitch);
+	//NSLog(@"locationSwitch update %d", locationSwitch);
+	//NSLog(@"orientationLockSwitch update %d", orientationLockSwitch);
+	//NSLog(@"vpnSwiscreenMirroringSwitch update %d", vpnSwitch);
+	//NSLog(@"vpnSwitch update %d", vpnSwitch);
+	//NSLog(@"enableTweak %d", enableTweak);
 }
 
 %ctor {
-		
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	//set initial `enable' variable
 	notificationCallback(NULL, NULL, NULL, NULL, NULL);

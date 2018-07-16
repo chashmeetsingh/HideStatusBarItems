@@ -53,6 +53,7 @@ static BOOL (*_logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled
 
 
 static BOOL _logos_method$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(_LOGOS_SELF_TYPE_NORMAL SBStatusBarStateAggregator* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, int item, BOOL enableItem) {
+	
     
     
     
@@ -72,81 +73,99 @@ static BOOL _logos_method$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled
     
     
     
+	
+	
+	
+
+	NSLog(@"Item number: %d", item);
 
 	if (enableTweak == YES) {
-		NSLog(@"Tweak enabled");
+		
 
 		switch (item) {
 			case 1:
-				NSLog(@"dndSwitch %d", dndSwitch);
+				
 				if (dndSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 2:
-				NSLog(@"airplaneModeSwitch %d", airplaneModeSwitch);
+				
 				if (airplaneModeSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 3:
-				NSLog(@"signalStrengthSwitch %d", signalStrengthSwitch);
+				
 				if (signalStrengthSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 4:
-				NSLog(@"carrierTextSwitch %d", carrierTextSwitch);
+				
 				if (carrierTextSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 6:
-				NSLog(@"wifiSwitch %d", wifiSwitch);
+				
 				if (wifiSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 8:
-				NSLog(@"batteryIconSwitch %d", batteryIconSwitch);
+				
 				if (batteryIconSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 9:
-				NSLog(@"batteryTextSwitch %d", batteryTextSwitch);
+				
 				if (batteryTextSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 12:
-				NSLog(@"bluetoothSwitch %d", bluetoothSwitch);
+				
 				if (bluetoothSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 14:
-				NSLog(@"alarmSwitch %d", alarmSwitch);
+				
 				if (alarmSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 17:
-				NSLog(@"locationSwitch %d", locationSwitch);
+				
 				if (locationSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 18:
-				NSLog(@"orientationLockSwitch %d", orientationLockSwitch);
+				
 				if (orientationLockSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 20:
-				NSLog(@"screenMirroringSwitch %d", screenMirroringSwitch);
+				
 				if (screenMirroringSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			case 24:
-				NSLog(@"vpnSwitch %d", vpnSwitch);
+				
 				if (vpnSwitch == YES) {
 					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 				}
+				break;
 			default: 
 				return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, enableItem);
 		}
 	}
-	NSLog(@"Tweak disabled");
+	
 
 	return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, enableItem);
 }
@@ -197,23 +216,23 @@ static void notificationCallback(CFNotificationCenterRef center, void *observer,
 	NSNumber *n = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"enableTweak" inDomain:domainString];
 	enableTweak = [n boolValue];
 
-	NSLog(@"dndSwitch update %d", dndSwitch);
-	NSLog(@"airplaneModeSwitch update %d", airplaneModeSwitch);
-	NSLog(@"signalStrengthSwitch update %d", signalStrengthSwitch);
-	NSLog(@"carrierTextSwitch update %d", carrierTextSwitch);
-	NSLog(@"wifiSwitch update %d", wifiSwitch);
-	NSLog(@"batteryIconSwitch update %d", batteryIconSwitch);
-	NSLog(@"batteryTextSwitch update %d", batteryTextSwitch);
-	NSLog(@"bluetoothSwitch update %d", bluetoothSwitch);
-	NSLog(@"alarmSwitch update %d", alarmSwitch);
-	NSLog(@"locationSwitch update %d", locationSwitch);
-	NSLog(@"orientationLockSwitch update %d", orientationLockSwitch);
-	NSLog(@"vpnSwiscreenMirroringSwitch update %d", vpnSwitch);
-	NSLog(@"vpnSwitch update %d", vpnSwitch);
-	NSLog(@"enableTweak %d", enableTweak);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
-static __attribute__((constructor)) void _logosLocalCtor_302198de(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_fe92ab4b(int __unused argc, char __unused **argv, char __unused **envp) {
 		
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	
@@ -225,4 +244,4 @@ static __attribute__((constructor)) void _logosLocalCtor_302198de(int __unused a
 }
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$SBStatusBarStateAggregator = objc_getClass("SBStatusBarStateAggregator"); MSHookMessageEx(_logos_class$_ungrouped$SBStatusBarStateAggregator, @selector(_setItem:enabled:), (IMP)&_logos_method$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$, (IMP*)&_logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$);} }
-#line 200 "Tweak.xm"
+#line 219 "Tweak.xm"

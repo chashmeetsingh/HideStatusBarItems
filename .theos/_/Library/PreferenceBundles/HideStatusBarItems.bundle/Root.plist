@@ -207,8 +207,20 @@
 			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>respring</string>
 			<key>label</key>
-			<string>CONTACT</string>
+			<string>Respring to apply changes</string>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>About me</string>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
@@ -220,17 +232,9 @@
 			<key>action</key>
 			<string>twitterContactMethod</string>
 			<key>label</key>
-			<string>Chashmeet Singh (@cchashmeetsingh)</string>
+			<string>Follow me on Twitter!</string>
 			<key>icon</key>
 			<string>twitter.png</string>
-		</dict>
-		<dict>
-			<key>label</key>
-			<string>My Open Source Projects</string>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>footerText</key>
-			<string></string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -238,17 +242,9 @@
 			<key>action</key>
 			<string>githubContactMethod</string>
 			<key>label</key>
-			<string>Chashmeet Singh (@chashmeetsingh)</string>
+			<string>Check out my projects</string>
 			<key>icon</key>
 			<string>github.png</string>
-		</dict>
-		<dict>
-			<key>label</key>
-			<string>DONATE</string>
-			<key>cell</key>
-			<string>PSGroupCell</string>
-			<key>footerText</key>
-			<string></string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -256,7 +252,7 @@
 			<key>action</key>
 			<string>paypalDonateMethod</string>
 			<key>label</key>
-			<string>Buy me a coffee</string>
+			<string>Buy me a coffee!</string>
 			<key>icon</key>
 			<string>paypal.png</string>
 		</dict>
