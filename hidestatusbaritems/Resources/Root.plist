@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>HideStatusBarItems First Page</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>AwesomeSwitch1</string>
+			<key>label</key>
+			<string>Awesome Switch 1</string>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>CONTACT</string>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>twitterContactMethod</string>
+			<key>label</key>
+			<string>Chashmeet Singh (@cchashmeetsingh)</string>
+			<key>icon</key>
+			<string>twitter.png</string>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>My Open Source Projects</string>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>githubContactMethod</string>
+			<key>label</key>
+			<string>Chashmeet Singh (@chashmeetsingh)</string>
+			<key>icon</key>
+			<string>github.png</string>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>DONATE</string>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>paypalDonateMethod</string>
+			<key>label</key>
+			<string>Buy me a coffee</string>
+			<key>icon</key>
+			<string>paypal.png</string>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string></string>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Made with 💖 by Chashmeet Singh</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>HideStatusBarItems</string>
+</dict>
+</plist>
