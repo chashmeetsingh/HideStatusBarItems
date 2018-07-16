@@ -24,7 +24,17 @@
 }
 
 -(void)respring {
-	//[[(FBSystemService) sharedInstance] exitAndRelaunch:YES]
+	UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Are you sure?" message:@"This will respring your device and apply the changes." preferredStyle:UIAlertControllerStyleAlert];
+
+  	UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){ 
+		pid_t pid;
+		const char* args[] = {"killall", "backboardd", NULL};
+		posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+    }];
+  	UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+  	[alert addAction:cancel];
+  	[alert addAction:ok];
+  	[self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

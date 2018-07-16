@@ -3,7 +3,7 @@ Name: HideStatusBarItems
 Depends: mobilesubstrate
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: An awesome MobileSubstrate tweak!
-Maintainer: Chashmeet Singh
-Author: Chashmeet Singh
+Description: A simple tweak which allows you to hide specific elements in the status bar.
+Maintainer: Chashmeet Singh <chashmeetsingh@gmail.com>
+Author: Chashmeet Singh <chashmeetsingh@gmail.com>
 Section: Tweaks

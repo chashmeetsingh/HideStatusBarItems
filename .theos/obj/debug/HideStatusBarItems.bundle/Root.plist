@@ -209,14 +209,10 @@
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
-			<key>default</key>
-			<false/>
-			<key>defaults</key>
-			<string>com.chashmeet.hidestatusbaritems</string>
-			<key>key</key>
+			<key>action</key>
 			<string>respring</string>
 			<key>label</key>
-			<string>Respring to apply changes</string>
+			<string>Respring to apply changes!</string>
 		</dict>
 		<dict>
 			<key>label</key>
