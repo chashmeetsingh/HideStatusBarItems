@@ -8,19 +8,203 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>HideStatusBarItems First Page</string>
+			<string>OPTIONS</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<true/>
+			<false/>
 			<key>defaults</key>
 			<string>com.chashmeet.hidestatusbaritems</string>
 			<key>key</key>
-			<string>AwesomeSwitch1</string>
+			<string>enableTweak</string>
 			<key>label</key>
-			<string>Awesome Switch 1</string>
+			<string>Enable Tweak</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>dndSwitch</string>
+			<key>label</key>
+			<string>Hide DND icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>airplaneModeSwitch</string>
+			<key>label</key>
+			<string>Hide Airplane Mode icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>signalStrengthSwitch</string>
+			<key>label</key>
+			<string>Hide Signal Strength icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>carrierTextSwitch</string>
+			<key>label</key>
+			<string>Hide Carrier Text</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>wifiSwitch</string>
+			<key>label</key>
+			<string>Hide Wifi icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>batteryIconSwitch</string>
+			<key>label</key>
+			<string>Hide Battery icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>batteryTextSwitch</string>
+			<key>label</key>
+			<string>Hide Battery text</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>bluetoothSwitch</string>
+			<key>label</key>
+			<string>Hide Bluetooth icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>alarmSwitch</string>
+			<key>label</key>
+			<string>Hide Alarm icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>locationSwitch</string>
+			<key>label</key>
+			<string>Hide Location icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>orientationLockSwitch</string>
+			<key>label</key>
+			<string>Hide Orientation Lock icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>screenMirroringSwitch</string>
+			<key>label</key>
+			<string>Hide Screen Mirroring icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>vpnSwitch</string>
+			<key>label</key>
+			<string>Hide VPN icon</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
 		</dict>
 		<dict>
 			<key>label</key>
@@ -72,17 +256,17 @@
 			<key>action</key>
 			<string>paypalDonateMethod</string>
 			<key>label</key>
-			<string>Chashmeet Singh</string>
+			<string>Buy me a coffee</string>
 			<key>icon</key>
 			<string>paypal.png</string>
 		</dict>
 		<dict>
 			<key>label</key>
-			<string></string>
+			<string>Made with 💖 by Chashmeet Singh</string>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Made with 💖 by Chashmeet Singh</string>
+			<string></string>
 		</dict>
 	</array>
 	<key>title</key>
