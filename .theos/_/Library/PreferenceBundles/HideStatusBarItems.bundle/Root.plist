@@ -208,7 +208,7 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSSwitchCell</string>
+			<string>PSButtonCell</string>
 			<key>default</key>
 			<false/>
 			<key>defaults</key>

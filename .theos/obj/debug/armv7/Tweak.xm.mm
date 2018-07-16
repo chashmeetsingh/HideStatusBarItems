@@ -74,10 +74,8 @@ static BOOL _logos_method$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled
     
     
 	
-	
-	
 
-	NSLog(@"Item number: %d", item);
+	
 
 	if (enableTweak == YES) {
 		
@@ -232,8 +230,7 @@ static void notificationCallback(CFNotificationCenterRef center, void *observer,
 	
 }
 
-static __attribute__((constructor)) void _logosLocalCtor_fe92ab4b(int __unused argc, char __unused **argv, char __unused **envp) {
-		
+static __attribute__((constructor)) void _logosLocalCtor_63eaf7b7(int __unused argc, char __unused **argv, char __unused **envp) {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	
 	notificationCallback(NULL, NULL, NULL, NULL, NULL);
@@ -244,4 +241,4 @@ static __attribute__((constructor)) void _logosLocalCtor_fe92ab4b(int __unused a
 }
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$SBStatusBarStateAggregator = objc_getClass("SBStatusBarStateAggregator"); MSHookMessageEx(_logos_class$_ungrouped$SBStatusBarStateAggregator, @selector(_setItem:enabled:), (IMP)&_logos_method$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$, (IMP*)&_logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$);} }
-#line 219 "Tweak.xm"
+#line 216 "Tweak.xm"
