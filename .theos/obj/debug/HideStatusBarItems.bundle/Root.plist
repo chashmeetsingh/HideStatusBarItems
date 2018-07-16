@@ -207,6 +207,18 @@
 			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
+			<string>respring</string>
+			<key>label</key>
+			<string>Respring to apply changes!</string>
+		</dict>
+		<dict>
 			<key>label</key>
 			<string>CONTACT</string>
 			<key>cell</key>

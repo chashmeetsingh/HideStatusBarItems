@@ -48,56 +48,71 @@ static BOOL enableTweak = NO;
     // 27: Black square icon
 
 	if (enableTweak == YES) {
+		NSLog(@"Tweak enabled");
+
 		switch (item) {
 			case 1:
+				NSLog(@"dndSwitch %d", dndSwitch);
 				if (dndSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 2:
+				NSLog(@"airplaneModeSwitch %d", airplaneModeSwitch);
 				if (airplaneModeSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 3:
+				NSLog(@"signalStrengthSwitch %d", signalStrengthSwitch);
 				if (signalStrengthSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 4:
+				NSLog(@"carrierTextSwitch %d", carrierTextSwitch);
 				if (carrierTextSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 6:
+				NSLog(@"wifiSwitch %d", wifiSwitch);
 				if (wifiSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 8:
+				NSLog(@"batteryIconSwitch %d", batteryIconSwitch);
 				if (batteryIconSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 9:
+				NSLog(@"batteryTextSwitch %d", batteryTextSwitch);
 				if (batteryTextSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 12:
+				NSLog(@"bluetoothSwitch %d", bluetoothSwitch);
 				if (bluetoothSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 14:
+				NSLog(@"alarmSwitch %d", alarmSwitch);
 				if (alarmSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 17:
+				NSLog(@"locationSwitch %d", locationSwitch);
 				if (locationSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 18:
+				NSLog(@"orientationLockSwitch %d", orientationLockSwitch);
 				if (orientationLockSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 20:
+				NSLog(@"screenMirroringSwitch %d", screenMirroringSwitch);
 				if (screenMirroringSwitch == YES) {
 					return %orig(item, NO);
 				}
 			case 24:
+				NSLog(@"vpnSwitch %d", vpnSwitch);
 				if (vpnSwitch == YES) {
 					return %orig(item, NO);
 				}
@@ -105,6 +120,7 @@ static BOOL enableTweak = NO;
 				return %orig;
 		}
 	}
+	NSLog(@"Tweak disabled");
 
 	return %orig;
 }
@@ -114,46 +130,61 @@ static BOOL enableTweak = NO;
 static void notificationCallback(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {	
 	
 	NSNumber *a = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"dndSwitch" inDomain:domainString];
-	dndSwitch = (a)? [a boolValue]:NO;
+	dndSwitch = [a boolValue];
 
 	NSNumber *b = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"airplaneModeSwitch" inDomain:domainString];
-	airplaneModeSwitch = (b)? [b boolValue]:NO;
+	airplaneModeSwitch = [b boolValue];
 
 	NSNumber *c = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"signalStrengthSwitch" inDomain:domainString];
-	signalStrengthSwitch = (c)? [c boolValue]:NO;
+	signalStrengthSwitch = [c boolValue];
 
 	NSNumber *d = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"carrierTextSwitch" inDomain:domainString];
-	carrierTextSwitch = (d)? [d boolValue]:NO;
+	carrierTextSwitch = [d boolValue];
 
 	NSNumber *e = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"wifiSwitch" inDomain:domainString];
-	wifiSwitch = (e)? [e boolValue]:NO;
+	wifiSwitch = [e boolValue];
 
 	NSNumber *f = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"batteryIconSwitch" inDomain:domainString];
-	batteryIconSwitch = (f)? [f boolValue]:NO;
+	batteryIconSwitch = [f boolValue];
 
 	NSNumber *g = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"batteryTextSwitch" inDomain:domainString];
-	batteryTextSwitch = (g)? [g boolValue]:NO;
+	batteryTextSwitch = [g boolValue];
 
 	NSNumber *h = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"bluetoothSwitch" inDomain:domainString];
-	bluetoothSwitch = (h)? [h boolValue]:NO;
+	bluetoothSwitch = [h boolValue];
 
 	NSNumber *i = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"alarmSwitch" inDomain:domainString];
-	alarmSwitch = (i)? [i boolValue]:NO;
+	alarmSwitch = [i boolValue];
 
 	NSNumber *j = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"locationSwitch" inDomain:domainString];
-	locationSwitch = (j)? [j boolValue]:NO;
+	locationSwitch = [j boolValue];
 
 	NSNumber *k = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"orientationLockSwitch" inDomain:domainString];
-	orientationLockSwitch = (k)? [k boolValue]:NO;
+	orientationLockSwitch = [k boolValue];
 
 	NSNumber *l = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"screenMirroringSwitch" inDomain:domainString];
-	screenMirroringSwitch = (l)? [l boolValue]:NO;
+	screenMirroringSwitch = [l boolValue];
 
 	NSNumber *m = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"vpnSwitch" inDomain:domainString];
-	vpnSwitch = (m)? [m boolValue]:NO;
+	vpnSwitch = [m boolValue];
 
 	NSNumber *n = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"enableTweak" inDomain:domainString];
-	enableTweak = (n)? [n boolValue]:NO;
+	enableTweak = [n boolValue];
+
+	NSLog(@"dndSwitch update %d", dndSwitch);
+	NSLog(@"airplaneModeSwitch update %d", airplaneModeSwitch);
+	NSLog(@"signalStrengthSwitch update %d", signalStrengthSwitch);
+	NSLog(@"carrierTextSwitch update %d", carrierTextSwitch);
+	NSLog(@"wifiSwitch update %d", wifiSwitch);
+	NSLog(@"batteryIconSwitch update %d", batteryIconSwitch);
+	NSLog(@"batteryTextSwitch update %d", batteryTextSwitch);
+	NSLog(@"bluetoothSwitch update %d", bluetoothSwitch);
+	NSLog(@"alarmSwitch update %d", alarmSwitch);
+	NSLog(@"locationSwitch update %d", locationSwitch);
+	NSLog(@"orientationLockSwitch update %d", orientationLockSwitch);
+	NSLog(@"vpnSwiscreenMirroringSwitch update %d", vpnSwitch);
+	NSLog(@"vpnSwitch update %d", vpnSwitch);
+	NSLog(@"enableTweak %d", enableTweak);
 }
 
 %ctor {
