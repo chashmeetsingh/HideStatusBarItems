@@ -212,7 +212,7 @@
 			<key>action</key>
 			<string>respring</string>
 			<key>label</key>
-			<string>Respring to apply changes!</string>
+			<string>Apply Changes!</string>
 		</dict>
 		<dict>
 			<key>label</key>
@@ -238,7 +238,7 @@
 			<key>action</key>
 			<string>githubContactMethod</string>
 			<key>label</key>
-			<string>Check out my projects</string>
+			<string>Source Code</string>
 			<key>icon</key>
 			<string>github.png</string>
 		</dict>

@@ -78,91 +78,9 @@ static BOOL _logos_method$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled
 	
 
 	if (enableTweak == YES) {
-		
-
-		switch (item) {
-			case 1:
-				
-				if (dndSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 2:
-				
-				if (airplaneModeSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 3:
-				
-				if (signalStrengthSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 4:
-				
-				if (carrierTextSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 6:
-				
-				if (wifiSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 8:
-				
-				if (batteryIconSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 9:
-				
-				if (batteryTextSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 12:
-				
-				if (bluetoothSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 14:
-				
-				if (alarmSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 17:
-				
-				if (locationSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 18:
-				
-				if (orientationLockSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 20:
-				
-				if (screenMirroringSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			case 24:
-				
-				if (vpnSwitch == YES) {
-					return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
-				}
-				break;
-			default: 
-				return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, enableItem);
-		}
+		return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, NO);
 	}
+	
 	
 
 	return _logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$(self, _cmd, item, enableItem);
@@ -230,7 +148,7 @@ static void notificationCallback(CFNotificationCenterRef center, void *observer,
 	
 }
 
-static __attribute__((constructor)) void _logosLocalCtor_63eaf7b7(int __unused argc, char __unused **argv, char __unused **envp) {
+static __attribute__((constructor)) void _logosLocalCtor_aed7ce20(int __unused argc, char __unused **argv, char __unused **envp) {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	
 	notificationCallback(NULL, NULL, NULL, NULL, NULL);
@@ -241,4 +159,4 @@ static __attribute__((constructor)) void _logosLocalCtor_63eaf7b7(int __unused a
 }
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$SBStatusBarStateAggregator = objc_getClass("SBStatusBarStateAggregator"); MSHookMessageEx(_logos_class$_ungrouped$SBStatusBarStateAggregator, @selector(_setItem:enabled:), (IMP)&_logos_method$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$, (IMP*)&_logos_orig$_ungrouped$SBStatusBarStateAggregator$_setItem$enabled$);} }
-#line 216 "Tweak.xm"
+#line 134 "Tweak.xm"

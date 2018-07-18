@@ -16,7 +16,7 @@
 }
 
 -(void)githubContactMethod {
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://github.com/chashmeetsingh"]];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"https://github.com/chashmeetsingh/HideStatusBarItems"]];
 }
 
 -(void)paypalDonateMethod {
