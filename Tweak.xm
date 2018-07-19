@@ -9,6 +9,7 @@ static NSString *notificationString = @"com.chashmeet.hidestatusbaritems/prefere
 - (void)setObject:(id)value forKey:(NSString *)key inDomain:(NSString *)domain;
 @end
 
+static BOOL timeSwitch = NO;
 static BOOL dndSwitch = NO;
 static BOOL airplaneModeSwitch = NO;
 static BOOL signalStrengthSwitch = NO;
@@ -25,6 +26,13 @@ static BOOL vpnSwitch = NO;
 static BOOL enableTweak = NO;
 
 %hook SBStatusBarStateAggregator
+
+-(void)_updateTimeItems {
+	if (enableTweak && timeSwitch) {
+		return;
+	}
+	return %orig;
+}
 
 -(BOOL)_setItem:(int)item enabled:(BOOL)enableItem {
 	// 0: Time but not working
@@ -146,6 +154,9 @@ static BOOL enableTweak = NO;
 
 static void notificationCallback(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo) {	
 	
+	NSNumber *t = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"timeSwitch" inDomain:domainString];
+	timeSwitch = [t boolValue];
+
 	NSNumber *a = (NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:@"dndSwitch" inDomain:domainString];
 	dndSwitch = [a boolValue];
 

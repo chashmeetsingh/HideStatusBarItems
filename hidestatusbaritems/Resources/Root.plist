@@ -32,6 +32,20 @@
 			<key>defaults</key>
 			<string>com.chashmeet.hidestatusbaritems</string>
 			<key>key</key>
+			<string>timeSwitch</string>
+			<key>label</key>
+			<string>Hide Time</string>
+			<key>PostNotification</key>
+			<string>com.chashmeet.hidestatusbaritems/preferences.changed</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.chashmeet.hidestatusbaritems</string>
+			<key>key</key>
 			<string>dndSwitch</string>
 			<key>label</key>
 			<string>Hide DND icon</string>
